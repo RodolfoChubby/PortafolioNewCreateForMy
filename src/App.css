@@ -1,0 +1,210 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Añade estos estilos en tu archivo App.css */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  border-left: 2px solid #00503d; /* Cambia el color de la línea según tu paleta */
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #00503d; /* Cambia el color según tu paleta */
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-content {
+  position: relative;
+  margin-left: 50px;
+  background-color: #f9f9f9; /* Fondo de la tarjeta */
+  padding: 10px 20px;
+  border: 1px solid #ddd; /* Borde de la tarjeta */
+  border-radius: 5px;
+}
+
+.timeline-content h5 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    display: none; /* Oculta la línea vertical en pantallas pequeñas */
+  }
+
+  .timeline-item {
+    margin-bottom: 10px;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+  }
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skill-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 100px;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 125px;
+  height: 125 px;
+}
+
+.skill-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.img-fluid {
+  border-radius: 25px;
+}
+
+/* Timeline.css */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  list-style-type: none;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e9ecef;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #00503d;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+.timeline-content h4 {
+  margin-top: 0;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  float: left;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  float: right;
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .timeline:before {
+    left: 8%;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    width: 100%;
+    float: none;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-icon,
+  .timeline-item:nth-child(even) .timeline-icon {
+    left: 8%;
+  }
+}
